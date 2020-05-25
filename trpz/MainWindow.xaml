@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:trpz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="0,0,-5.8,0.4">
+        Title="MainWindow" Height="701.2" Width="800">
+    <Grid Margin="0,0,-5.4,-19.8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="172*"/>
             <ColumnDefinition Width="177*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Ім'я" HorizontalAlignment="Left" Margin="4,4,0,0" VerticalAlignment="Top"/>
         <TextBox Name = "Name" Text="{Binding Сustomer}" HorizontalAlignment="Left" Height="32" Margin="39,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
-        <Button Content="Замовити" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="14,10,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
+        <Button Content="Замовити" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="14.4,10,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
 
 
-        <ListBox Name="listBox_storage" Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Storages}"
-                 SelectedItem="{Binding SelectedStorage}" Margin="4,41,5.8,190.4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"  >
+        <ListBox Name="listBox_storage" Grid.Row="0" ItemsSource="{Binding Storages}"
+                 SelectedItem="{Binding SelectedStorage}" Margin="0,0,10.2,387.4" RenderTransformOrigin="0.5,0.5" Height="222" VerticalAlignment="Bottom" Grid.ColumnSpan="2"  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
@@ -28,13 +32,25 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Name="listBox_good" Grid.Column="0" Grid.Row="0" ItemsSource="{Binding Goods}"
-                 SelectedItem="{Binding SelectedGood}" Margin="4,0,5.8,0.4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Height="185" VerticalAlignment="Bottom"  >
+        <ListBox Name="listBox_good" Grid.Row="0" ItemsSource="{Binding Goods}"
+                 SelectedItem="{Binding SelectedGood}" Margin="0,0,10.2,178.4" RenderTransformOrigin="0.5,0.5" Height="204" VerticalAlignment="Bottom" Grid.ColumnSpan="2"  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
                         <TextBlock FontSize="18" Text="{Binding Path=Name}" />
                         <TextBlock FontSize="18" Text="{Binding Path=ExecutionTime}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListBox Name="listBox_order" ItemsSource="{Binding Orders}"
+                 SelectedItem="{Binding SelectedOrder}" Margin="0,477,10.2,10.2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2"  >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=NameCustomer}" />
+                        <TextBlock FontSize="18" Text="{Binding Path=TimeLeft}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

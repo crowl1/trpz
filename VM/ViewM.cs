@@ -11,13 +11,6 @@ using static Infrastructure.Commands;
 
 namespace VM
 {
-    /*public class ViewM
-    {
-        static void Main(string[] args)
-        {
-
-        } }*/
-
     public class ViewM : INotifyPropertyChanged
     {
         static void Main(string[] args)
@@ -25,8 +18,22 @@ namespace VM
 
         }
 
-        Delivery delivery = new Delivery();
+        public Delivery delivery = new Delivery();
 
+        public ObservableCollection<Order> OrdersVM { get; set; }
+
+        
+
+        private Order _selectedOrder;
+        public Order SelectedOrder
+        {
+            get { return _selectedOrder; }
+            set
+            {
+                _selectedOrder = value;
+                OnPropertyChanged("SelectedOrder");
+            }
+        }
 
         private Good _selectedGood;
         public ObservableCollection<Good> Goods { get; set; }
@@ -76,6 +83,7 @@ namespace VM
                     (addCommand = new RelayCommand(obj =>
                     {
                         delivery.orderProcessing(Сustomer, SelectedStorage.Distance, SelectedGood.ExecutionTime);
+                        OrdersVM.Insert(0, new Order { NameCustomer = Сustomer, TimeLeft = delivery.Orders[0].TimeLeft });
                     }));
             }
         }
@@ -94,12 +102,14 @@ namespace VM
                 new Storage {Name = "Рівненський склад", Distance = 25}
             };
 
-                Goods = new ObservableCollection<Good>
+            Goods = new ObservableCollection<Good>
             {
                 new Good {Name = "Молоко", ExecutionTime = 450},
                 new Good {Name = "Хліб", ExecutionTime = 200},
                 new Good {Name = "Торти", ExecutionTime = 1000}
             };
+            OrdersVM = new ObservableCollection<Order> { };
+            
         }
 
 
