@@ -1,0 +1,10 @@
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\VM.exe.config
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\VM.exe
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\VM.pdb
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\M.exe
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\M.pdb
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\M.exe.config
+C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.csprojAssemblyReference.cache
+C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.csproj.CopyComplete
+C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.exe
+C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.pdb
