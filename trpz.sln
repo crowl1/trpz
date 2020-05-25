@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UoW", "UoW\UoW.csproj", "{8D97B042-C05B-4743-970E-E9A90828ADBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{B57BE8DA-654E-400D-B51D-8B8A58E7751D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8D97B042-C05B-4743-970E-E9A90828ADBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D97B042-C05B-4743-970E-E9A90828ADBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D97B042-C05B-4743-970E-E9A90828ADBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B57BE8DA-654E-400D-B51D-8B8A58E7751D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B57BE8DA-654E-400D-B51D-8B8A58E7751D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B57BE8DA-654E-400D-B51D-8B8A58E7751D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B57BE8DA-654E-400D-B51D-8B8A58E7751D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

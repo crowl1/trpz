@@ -8,3 +8,6 @@ C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.csprojAssemblyReference.cache
 C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.csproj.CopyComplete
 C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.exe
 C:\Users\crowli\source\repos\trpz\VM\obj\Debug\VM.pdb
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\Infrastructure.exe
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\Infrastructure.pdb
+C:\Users\crowli\source\repos\trpz\VM\bin\Debug\Infrastructure.exe.config

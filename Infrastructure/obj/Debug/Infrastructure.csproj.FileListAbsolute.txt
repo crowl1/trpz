@@ -1,0 +1,6 @@
+C:\Users\crowli\source\repos\trpz\Infrastructure\bin\Debug\Infrastructure.exe.config
+C:\Users\crowli\source\repos\trpz\Infrastructure\bin\Debug\Infrastructure.exe
+C:\Users\crowli\source\repos\trpz\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\crowli\source\repos\trpz\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+C:\Users\crowli\source\repos\trpz\Infrastructure\obj\Debug\Infrastructure.exe
+C:\Users\crowli\source\repos\trpz\Infrastructure\obj\Debug\Infrastructure.pdb
