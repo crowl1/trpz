@@ -15,9 +15,9 @@
             <ColumnDefinition Width="172*"/>
             <ColumnDefinition Width="177*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Ім'я" HorizontalAlignment="Left" Margin="4,4,0,0" VerticalAlignment="Top"/>
-        <TextBox Name = "Name" Text="{Binding Сustomer}" HorizontalAlignment="Left" Height="32" Margin="39,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
-        <Button Content="Замовити" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="14.4,10,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
+        <Label Content="Ім'я" Margin="23,7,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30"/>
+        <TextBox Name = "Name" Text="{Binding Сustomer}" HorizontalAlignment="Left" Height="19" Margin="58,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="612" Grid.ColumnSpan="2"/>
+        <Button Content="Замовити" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="281.4,10,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
 
 
         <ListBox Name="listBox_storage" Grid.Row="0" ItemsSource="{Binding StoragesVM}"

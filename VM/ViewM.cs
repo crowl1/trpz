@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using M;
-using static Infrastructure.Commands;
+using Infrastructure;
 
 namespace VM
 {
@@ -17,7 +17,7 @@ namespace VM
         {
 
         }
-        public Delivery delivery = new Delivery();
+        Delivery delivery = new Delivery();
 
 
         public ObservableCollection<Order> OrdersVM { get; set; }
@@ -75,13 +75,13 @@ namespace VM
 
 
 
-        private RelayCommand addCommand;
+        private RelayCommand _addCommand;
         public RelayCommand AddCommand
         {
             get
             {
-                return addCommand ??
-                    (addCommand = new RelayCommand(obj =>
+                return _addCommand ??
+                    (_addCommand = new RelayCommand(obj =>
                     {
                         OrdersVM.Insert(0, new Order { NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime) });
                     }));
@@ -98,6 +98,10 @@ namespace VM
             StoragesVM = new Storages();
             GoodsVM = new Goods();
             OrdersVM = new ObservableCollection<Order> { };
+
+            SelectedStorage = StoragesVM.FirstOrDefault();
+            SelectedGood = GoodsVM.FirstOrDefault();
+            _customer = "Анонім";
         }
 
 
