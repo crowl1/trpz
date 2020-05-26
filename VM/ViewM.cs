@@ -17,11 +17,10 @@ namespace VM
         {
 
         }
-
         public Delivery delivery = new Delivery();
 
-        public ObservableCollection<Order> OrdersVM { get; set; }
 
+        public ObservableCollection<Order> OrdersVM { get; set; }
         
 
         private Order _selectedOrder;
@@ -74,6 +73,8 @@ namespace VM
         }
 
 
+
+
         private RelayCommand addCommand;
         public RelayCommand AddCommand
         {
@@ -82,8 +83,7 @@ namespace VM
                 return addCommand ??
                     (addCommand = new RelayCommand(obj =>
                     {
-                        delivery.orderProcessing(Сustomer, SelectedStorage.Distance, SelectedGood.ExecutionTime);
-                        OrdersVM.Insert(0, new Order { NameCustomer = Сustomer, TimeLeft = delivery.Orders[0].TimeLeft });
+                        OrdersVM.Insert(0, new Order { NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime) });
                     }));
             }
         }
@@ -96,10 +96,8 @@ namespace VM
         public ViewM()
         {
             StoragesVM = new Storages();
-
             GoodsVM = new Goods();
             OrdersVM = new ObservableCollection<Order> { };
-            
         }
 
 

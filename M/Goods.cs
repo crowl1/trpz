@@ -11,9 +11,9 @@ namespace M
     {
         public Goods()
         {
-            this.Add(new Good { Name = "Молоко", ExecutionTime = 450 });
-            this.Add(new Good { Name = "Хліб", ExecutionTime = 200 });
-            this.Add(new Good { Name = "Торти", ExecutionTime = 1000 });
+            this.Add(new Good { Name = "Молоко", ExecutionTime = 4500 });
+            this.Add(new Good { Name = "Хліб", ExecutionTime = 2000 });
+            this.Add(new Good { Name = "Торти", ExecutionTime = 10000 });
         }
     }
 }

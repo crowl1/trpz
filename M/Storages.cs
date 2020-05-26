@@ -11,9 +11,9 @@ namespace M
     {
         public Storages()
         {
-            this.Add(new Storage { Name = "Київський склад", Distance = 10 });
-            this.Add(new Storage { Name = "Одеський склад", Distance = 50 });
-            this.Add(new Storage { Name = "Рівненський склад", Distance = 25 });
+            this.Add(new Storage { Name = "Київський склад", Distance = 100000 });
+            this.Add(new Storage { Name = "Одеський склад", Distance = 700000 });
+            this.Add(new Storage { Name = "Рівненський склад", Distance = 450000 });
         }
     }
 }

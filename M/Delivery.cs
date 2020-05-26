@@ -9,25 +9,23 @@ namespace M
 {
     public class Delivery
     {
-        public ObservableCollection<Order> Orders { get; set; }
         public ObservableCollection<Manager> ManagersM { get; set; }
         public ObservableCollection<Driver> DriversM { get; set; }
         public Delivery()
         {
-            Orders = new ObservableCollection<Order> { };
             ManagersM = new Managers();
             DriversM = new Drivers();
         }
-        public void orderProcessing(string Name, int meters, int TimeGood)
+        public long orderProcessing(int meters, int TimeGood)
         {
-            Orders.Insert(0, new Order { NameCustomer = Name, TimeLeft = TimeGood + Math.Min(ManagerCalculation(), DriverCalculation(meters)) });
+            return TimeGood + Math.Min(ManagerCalculation(), DriverCalculation(meters));
         }
 
         List<long> manager_time = new List<long>();
         List<long> driver_time = new List<long>();
 
 
-        public long ManagerCalculation()
+        long ManagerCalculation()
         {
             manager_time.Clear();
 
@@ -58,7 +56,7 @@ namespace M
         }
 
 
-        public long DriverCalculation(int meters)
+        long DriverCalculation(int meters)
         {
             driver_time.Clear();
 
@@ -74,6 +72,7 @@ namespace M
             {
                 if (d.ReleaseTime == time_left)
                 {
+                    Console.WriteLine(d.ReleaseTime);
                     if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= d.ReleaseTime)
                     {
                         d.ReleaseTime += meters / d.MpS;
