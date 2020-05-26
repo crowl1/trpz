@@ -10,25 +10,13 @@ namespace M
     public class Delivery
     {
         public ObservableCollection<Order> Orders { get; set; }
-        public ObservableCollection<Manager> Managers { get; set; }
-        public ObservableCollection<Driver> Drivers { get; set; }
+        public ObservableCollection<Manager> ManagersM { get; set; }
+        public ObservableCollection<Driver> DriversM { get; set; }
         public Delivery()
         {
             Orders = new ObservableCollection<Order> { };
-            Managers = new ObservableCollection<Manager>
-            {
-                new Manager {ID = 0, Name = "Антон", ExecutionTime = 15, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-                new Manager {ID = 1, Name = "Анастасія", ExecutionTime = 25, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-                new Manager {ID = 2, Name = "Роман", ExecutionTime = 45, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()}
-            };
-            Drivers = new ObservableCollection<Driver>
-            {
-                new Driver {ID = 0, Name = "Олександр", MpS = 30, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-                new Driver {ID = 1, Name = "Роман", MpS = 20, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-                new Driver {ID = 2, Name = "Олексій", MpS = 50, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-                new Driver {ID = 3, Name = "Антон", MpS = 40, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-                new Driver {ID = 4, Name = "Андрій", MpS = 15, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds()},
-            };
+            ManagersM = new Managers();
+            DriversM = new Drivers();
         }
         public void orderProcessing(string Name, int meters, int TimeGood)
         {
@@ -43,7 +31,7 @@ namespace M
         {
             manager_time.Clear();
 
-            foreach (Manager m in Managers) //наповнюється додатковий список, який потрібен для знаходження min значення
+            foreach (Manager m in ManagersM) //наповнюється додатковий список, який потрібен для знаходження min значення
             {
                 manager_time.Add(m.ReleaseTime);
             }
@@ -51,7 +39,7 @@ namespace M
             long time_left = manager_time.Min();
 
 
-            foreach (Manager m in Managers)
+            foreach (Manager m in ManagersM)
             {
                 if (m.ReleaseTime == time_left)
                 {
@@ -74,7 +62,7 @@ namespace M
         {
             driver_time.Clear();
 
-            foreach (Driver d in Drivers)
+            foreach (Driver d in DriversM)
             {
                 driver_time.Add(d.ReleaseTime);
             }
@@ -82,7 +70,7 @@ namespace M
             long time_left = driver_time.Min();
 
 
-            foreach (Driver d in Drivers)
+            foreach (Driver d in DriversM)
             {
                 if (d.ReleaseTime == time_left)
                 {

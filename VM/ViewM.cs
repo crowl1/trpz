@@ -36,7 +36,7 @@ namespace VM
         }
 
         private Good _selectedGood;
-        public ObservableCollection<Good> Goods { get; set; }
+        public ObservableCollection<Good> GoodsVM { get; set; }
         public Good SelectedGood
         {
             get { return _selectedGood; }
@@ -62,7 +62,7 @@ namespace VM
 
 
         private Storage _selectedStorage;
-        public ObservableCollection<Storage> Storages { get; set; }
+        public ObservableCollection<Storage> StoragesVM { get; set; }
         public Storage SelectedStorage
         {
             get { return _selectedStorage; }
@@ -95,19 +95,9 @@ namespace VM
 
         public ViewM()
         {
-            Storages = new ObservableCollection<Storage>
-            {
-                new Storage {Name = "Київський склад", Distance = 10},
-                new Storage {Name = "Одеський склад", Distance = 50},
-                new Storage {Name = "Рівненський склад", Distance = 25}
-            };
+            StoragesVM = new Storages();
 
-            Goods = new ObservableCollection<Good>
-            {
-                new Good {Name = "Молоко", ExecutionTime = 450},
-                new Good {Name = "Хліб", ExecutionTime = 200},
-                new Good {Name = "Торти", ExecutionTime = 1000}
-            };
+            GoodsVM = new Goods();
             OrdersVM = new ObservableCollection<Order> { };
             
         }

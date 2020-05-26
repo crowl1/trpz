@@ -20,7 +20,7 @@
         <Button Content="Замовити" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="14.4,10,0,0" VerticalAlignment="Top" Width="114" Grid.Column="1"/>
 
 
-        <ListBox Name="listBox_storage" Grid.Row="0" ItemsSource="{Binding Storages}"
+        <ListBox Name="listBox_storage" Grid.Row="0" ItemsSource="{Binding StoragesVM}"
                  SelectedItem="{Binding SelectedStorage}" Margin="0,0,10.2,387.4" RenderTransformOrigin="0.5,0.5" Height="222" VerticalAlignment="Bottom" Grid.ColumnSpan="2"  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -32,7 +32,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Name="listBox_good" Grid.Row="0" ItemsSource="{Binding Goods}"
+        <ListBox Name="listBox_good" Grid.Row="0" ItemsSource="{Binding GoodsVM}"
                  SelectedItem="{Binding SelectedGood}" Margin="0,0,10.2,178.4" RenderTransformOrigin="0.5,0.5" Height="204" VerticalAlignment="Bottom" Grid.ColumnSpan="2"  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -44,7 +44,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <ListBox Name="listBox_order" ItemsSource="{Binding Orders}"
+        <ListBox Name="listBox_order" ItemsSource="{Binding OrdersVM}"
                  SelectedItem="{Binding SelectedOrder}" Margin="0,477,10.2,10.2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2"  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
