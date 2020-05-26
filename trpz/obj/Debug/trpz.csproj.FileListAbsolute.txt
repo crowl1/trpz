@@ -22,3 +22,5 @@ C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\Infrastructure.pdb
 C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\Infrastructure.exe.config
 C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\M.pdb
 C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\M.exe.config
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\Newtonsoft.Json.dll
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\Newtonsoft.Json.xml

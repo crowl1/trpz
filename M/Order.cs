@@ -8,16 +8,10 @@ using System.Threading.Tasks;
 
 namespace M
 {
-    public class Order : INotifyPropertyChanged
+    public class Order
     {
         public int ID { get; set; }
         public string NameCustomer { get; set; }
         public long TimeLeft { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
-        }
     }
 }

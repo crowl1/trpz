@@ -8,17 +8,10 @@ using System.Threading.Tasks;
 
 namespace M
 {
-    public class Storage : INotifyPropertyChanged
+    public class Storage
     {
         public int ID { get; set; }
         public string Name { get; set; }
         public int Distance { get; set; }
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
-        }
     }
 }

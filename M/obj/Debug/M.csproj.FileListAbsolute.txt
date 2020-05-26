@@ -4,3 +4,6 @@ C:\Users\crowli\source\repos\trpz\M\bin\Debug\M.pdb
 C:\Users\crowli\source\repos\trpz\M\obj\Debug\M.csprojAssemblyReference.cache
 C:\Users\crowli\source\repos\trpz\M\obj\Debug\M.exe
 C:\Users\crowli\source\repos\trpz\M\obj\Debug\M.pdb
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\Newtonsoft.Json.dll
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\Newtonsoft.Json.xml
+C:\Users\crowli\source\repos\trpz\M\obj\Debug\M.csproj.CopyComplete

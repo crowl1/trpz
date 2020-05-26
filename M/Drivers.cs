@@ -11,11 +11,11 @@ namespace M
     {
         public Drivers()
         {
-            this.Add(new Driver { ID = 0, Name = "Олександр", MpS = 30, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
-            this.Add(new Driver { ID = 1, Name = "Роман", MpS = 20, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
-            this.Add(new Driver { ID = 2, Name = "Олексій", MpS = 50, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
-            this.Add(new Driver { ID = 3, Name = "Антон", MpS = 40, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
-            this.Add(new Driver { ID = 4, Name = "Андрій", MpS = 15, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
+            this.Add(new Driver { Name = "Олександр", MpS = 30, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
+            this.Add(new Driver { Name = "Роман", MpS = 20, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
+            this.Add(new Driver { Name = "Олексій", MpS = 50, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
+            this.Add(new Driver { Name = "Антон", MpS = 40, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
+            this.Add(new Driver { Name = "Андрій", MpS = 15, ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds() });
         }
     }
 }

@@ -8,16 +8,10 @@ using System.Threading.Tasks;
 
 namespace M
 {
-    public class Good : INotifyPropertyChanged
+    public class Good
     {
         public int ID { get; set; }
         public string Name { get; set; }
         public int ExecutionTime { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
-        }
     }
 }

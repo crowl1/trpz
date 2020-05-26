@@ -83,7 +83,8 @@ namespace VM
                 return _addCommand ??
                     (_addCommand = new RelayCommand(obj =>
                     {
-                        OrdersVM.Insert(0, new Order { NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime) });
+                        OrdersVM.Insert(OrdersVM.Count, new Order {ID = OrdersVM.Count(), NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime) });
+                        Json.Jsons(OrdersVM);
                     }));
             }
         }
