@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mapper
 {
-    class Program
+    internal interface IMapper<TModel, TEntity>
     {
-        static void Main(string[] args)
-        {
-        }
+        TModel MapTo(TEntity data);
+        TEntity MapFrom(TModel data);
     }
 }
