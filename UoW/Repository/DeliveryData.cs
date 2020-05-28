@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using M;
+
+namespace DAL.Repository
+{
+    public class DeliveryData : DbContext
+    {
+        public DeliveryData() : base(ConfigurationManager.ConnectionStrings["DataBaseConnection"].ConnectionString)
+        {
+        }
+
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Storage> Storages{ get; set; }
+        public DbSet<Manager> Managers{ get; set; }
+        public DbSet<Good> Goods{ get; set; }
+        public DbSet<Driver> Drivers{ get; set; }
+    }
+}
