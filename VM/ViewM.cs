@@ -15,7 +15,6 @@ namespace VM
     {
         static void Main(string[] args)
         {
-
         }
         Delivery delivery = new Delivery();
 
@@ -98,10 +97,16 @@ namespace VM
         {
             StoragesVM = new Storages();
             GoodsVM = new Goods();
-            //OrdersVM = new ObservableCollection<Order> { };
-
-
-            OrdersVM = (ObservableCollection<Order>)Jsons<Order>.Read();
+            
+            if (OrdersVM == null)
+            {
+                OrdersVM = Jsons<Order>.Read();
+            }
+            else
+            {
+                
+            }
+            
 
             SelectedStorage = StoragesVM.FirstOrDefault();
             SelectedGood = GoodsVM.FirstOrDefault();

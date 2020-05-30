@@ -4,8 +4,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace M
 {
@@ -13,17 +16,12 @@ namespace M
     {
         public static void Write(ObservableCollection<T> OrdersVM)
         {
-            File.WriteAllText(
-                "C:/files.json",
-                JsonConvert.SerializeObject(
-                    OrdersVM.Select(hash => new { url = hash }),
-                    Formatting.Indented));
+
+            File.WriteAllText("C:/files.json",(JsonConvert.SerializeObject(OrdersVM, Formatting.Indented)));
         }
 
-        public static ObservableCollection<T> Read()
+       public static ObservableCollection<T> Read()
         {
-
-            // deserialize JSON directly from a file
             using (StreamReader file = File.OpenText(@"C:/files.json"))
             {
                 JsonSerializer serializer = new JsonSerializer();
