@@ -14,9 +14,7 @@ namespace M
         public string NameCustomer { get; set; }
         public long TimeLeft { get; set; }
 
-        public int Manager { get; set; }
-        public int Good { get; set; }
-        public Manager ManagerID { get; set; }
-        public Good GoodID { get; set; }
+        public int StarageID { get; set; }
+        public int GoodID { get; set; }
     }
 }
