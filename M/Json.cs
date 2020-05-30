@@ -14,15 +14,15 @@ namespace M
 {
     public class Jsons<T>
     {
-        public static void Write(ObservableCollection<T> OrdersVM)
+        public static void Write(ObservableCollection<T> OrdersVM, string path)
         {
 
-            File.WriteAllText("C:/files.json",(JsonConvert.SerializeObject(OrdersVM, Formatting.Indented)));
+            File.WriteAllText(path,(JsonConvert.SerializeObject(OrdersVM, Formatting.Indented)));
         }
 
-       public static ObservableCollection<T> Read()
+       public static ObservableCollection<T> Read(string path)
         {
-            using (StreamReader file = File.OpenText(@"C:/files.json"))
+            using (StreamReader file = File.OpenText(path))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 return (ObservableCollection<T>)serializer.Deserialize(file, typeof(ObservableCollection<T>));

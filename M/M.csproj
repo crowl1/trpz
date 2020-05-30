@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Directory.cs" />
     <Compile Include="Delivery.cs" />
     <Compile Include="Drivers.cs" />
     <Compile Include="Driver.cs" />
@@ -62,6 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Data\driver.json" />
+    <None Include="Data\good.json" />
+    <None Include="Data\manager.json" />
+    <None Include="Data\order.json" />
+    <None Include="Data\storage.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

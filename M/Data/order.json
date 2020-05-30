@@ -1,0 +1,107 @@
+[
+  {
+    "ID": 0,
+    "NameCustomer": "Анонімsdds",
+    "TimeLeft": 1590868579,
+    "StarageID": 1,
+    "GoodID": 1
+  },
+  {
+    "ID": 0,
+    "NameCustomer": "Сокульский-Годзилла",
+    "TimeLeft": 1590868579,
+    "StarageID": 1,
+    "GoodID": 1
+  },
+  {
+    "ID": 2,
+    "NameCustomer": "Анонімsdsdsd",
+    "TimeLeft": 1590872844,
+    "StarageID": 2,
+    "GoodID": 0
+  },
+  {
+    "ID": 3,
+    "NameCustomer": "Анонімsdsdsdsdds",
+    "TimeLeft": 1590877844,
+    "StarageID": 2,
+    "GoodID": 1
+  },
+  {
+    "ID": 4,
+    "NameCustomer": "Анонімfddf",
+    "TimeLeft": 1590861214,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 5,
+    "NameCustomer": "1111",
+    "TimeLeft": 1590861231,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 6,
+    "NameCustomer": "222",
+    "TimeLeft": 1590858773,
+    "StarageID": 0,
+    "GoodID": 1
+  },
+  {
+    "ID": 7,
+    "NameCustomer": "3333",
+    "TimeLeft": 1590861574,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 8,
+    "NameCustomer": "4444",
+    "TimeLeft": 1590861650,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 9,
+    "NameCustomer": "5555",
+    "TimeLeft": 1590861690,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 10,
+    "NameCustomer": "6666",
+    "TimeLeft": 1590861790,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 11,
+    "NameCustomer": "Анонім77777",
+    "TimeLeft": 1590863541,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 12,
+    "NameCustomer": "Анонім",
+    "TimeLeft": 253333,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 13,
+    "NameCustomer": "Анонім",
+    "TimeLeft": 255000,
+    "StarageID": 0,
+    "GoodID": 0
+  },
+  {
+    "ID": 14,
+    "NameCustomer": "Анонімfdfdf",
+    "TimeLeft": 1591010165,
+    "StarageID": 0,
+    "GoodID": 0
+  }
+]

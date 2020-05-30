@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using M.Data;
 
 namespace M
 {
@@ -13,8 +14,13 @@ namespace M
         public ObservableCollection<Driver> DriversM { get; set; }
         public Delivery()
         {
-            ManagersM = new Managers();
-            DriversM = new Drivers();
+            if (ManagersM == null)
+            {
+                string BaseDirectory = Directory.Dir();
+
+                ManagersM = Jsons<Manager>.Read(BaseDirectory + "\\manager.json");
+                DriversM = Jsons<Driver>.Read(BaseDirectory + "\\driver.json");
+            }
         }
         public long orderProcessing(int meters, int TimeGood)
         {
@@ -41,6 +47,10 @@ namespace M
             {
                 if (m.ReleaseTime == time_left)
                 {
+                    if (m.ReleaseTime == 0)
+                    {
+                        m.ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                    }
                     if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= m.ReleaseTime)
                     {
                         m.ReleaseTime += m.ExecutionTime;
@@ -72,7 +82,10 @@ namespace M
             {
                 if (d.ReleaseTime == time_left)
                 {
-                    Console.WriteLine(d.ReleaseTime);
+                    if (d.ReleaseTime == 0)
+                    {
+                        d.ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                    }
                     if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= d.ReleaseTime)
                     {
                         d.ReleaseTime += meters / d.MpS;
