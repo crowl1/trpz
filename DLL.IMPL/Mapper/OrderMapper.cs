@@ -8,7 +8,7 @@ using DAL.Repository;
 using Entities;
 using M;
 
-namespace BLL.IMPL
+namespace BLL.IMPL.Mapper
 {
     public class OrderMapper
     {

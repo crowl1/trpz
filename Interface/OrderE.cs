@@ -17,12 +17,13 @@ namespace Entities
         [Required]
         public long TimeLeft { get; set; }
 
+
         [Required]
-        public int Manager { get; set; }
+        public int Storage { get; set; }
         [Required]
         public int Good { get; set; }
-        [ForeignKey(nameof(Manager))]
 
+        [ForeignKey(nameof(Storage))]
         public StorageE StorageID { get; set; }
         [ForeignKey(nameof(Good))]
         public GoodE GoodID { get; set; }

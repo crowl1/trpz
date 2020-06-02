@@ -1,4 +1,4 @@
-﻿using DAL.IRepository;
+﻿using DAL.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,8 +7,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Repository
+namespace DAL.Impl
 {
+    /*
     public abstract class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly DeliveryData _deliveryData;
@@ -51,4 +52,5 @@ namespace DAL.Repository
             _deliveryData.SaveChanges();
         }
     }
+    */
 }

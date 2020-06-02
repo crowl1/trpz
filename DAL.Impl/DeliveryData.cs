@@ -5,9 +5,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities;
 using M;
 
-namespace DAL.Repository
+namespace DAL.Impl
 {
     public class DeliveryData : DbContext
     {
@@ -15,10 +16,10 @@ namespace DAL.Repository
         {
         }
 
-        public DbSet<OrderDTO> Orders { get; set; }
-        public DbSet<StorageDTO> Storages{ get; set; }
-        public DbSet<ManagerDTO> Managers{ get; set; }
-        public DbSet<GoodDTO> Goods{ get; set; }
-        public DbSet<DriverDTO> Drivers{ get; set; }
+        public DbSet<OrderE> Orders { get; set; }
+        public DbSet<StorageE> Storages{ get; set; }
+        public DbSet<ManagerE> Managers{ get; set; }
+        public DbSet<GoodE> Goods{ get; set; }
+        public DbSet<DriverE> Drivers{ get; set; }
     }
 }

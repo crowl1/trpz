@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Repository
+namespace DAL.Impl
 {
     public static class Container
     {
+        /*
         private static DeliveryData _DeliveryData;
         public static DeliveryData DeliveryData
         {
@@ -19,5 +20,6 @@ namespace DAL.Repository
             }
         }
         public static UnitOfWork UnitOfWork { get; set; }
+        */
     }
 }

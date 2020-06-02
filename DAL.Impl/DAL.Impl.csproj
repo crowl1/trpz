@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D97B042-C05B-4743-970E-E9A90828ADBD}</ProjectGuid>
+    <ProjectGuid>{488CB45F-0E2A-421C-96B9-220E702EA612}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DAL</RootNamespace>
-    <AssemblyName>DAL</AssemblyName>
+    <RootNamespace>DAL.Impl</RootNamespace>
+    <AssemblyName>DAL.Impl</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,33 +54,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IRepository\IDriverRepository.cs" />
-    <Compile Include="IRepository\IGenericRepository.cs" />
-    <Compile Include="IRepository\IGoodRepository.cs" />
-    <Compile Include="IRepository\IManagerRepository.cs" />
-    <Compile Include="IRepository\IOrderRepository.cs" />
-    <Compile Include="IRepository\IStorageRepository.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="DeliveryData.cs" />
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="OrderRepository.cs" />
+    <Compile Include="StorageRepository.cs" />
+    <Compile Include="ManagerRepository.cs" />
+    <Compile Include="DriverRepository.cs" />
+    <Compile Include="GoodRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Container.cs" />
-    <Compile Include="Repository\DeliveryData.cs" />
-    <Compile Include="Repository\DriverRepository.cs" />
-    <Compile Include="Repository\GenericRepository.cs" />
-    <Compile Include="Repository\GoodRepository.cs" />
-    <Compile Include="Repository\ManagerRepository.cs" />
-    <Compile Include="Repository\OrderRepository.cs" />
-    <Compile Include="Repository\StorageRepository.cs" />
-    <Compile Include="Repository\UnitOfWork.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Interface\Entities.csproj">
+      <Project>{0e030d5d-05c7-46ee-8f16-1468d1d499d8}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\M\M.csproj">
       <Project>{22b4fc27-d3c4-427e-ba76-e42091bb0adf}</Project>
       <Name>M</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\BLL.Abstract.csproj">
+      <Project>{2f574938-9790-49a3-90d8-2631a1b9678c}</Project>
+      <Name>BLL.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UoW\DAL.Abstract.csproj">
+      <Project>{8D97B042-C05B-4743-970E-E9A90828ADBD}</Project>
+      <Name>DAL.Abstract</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

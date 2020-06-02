@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Repository
+namespace DAL.Impl
 {
     public class UnitOfWork
     {
@@ -15,6 +15,13 @@ namespace DAL.Repository
         private GoodRepository _GoodRepository;
         private DriverRepository _DriverRepository;
 
+        DeliveryData deliveryData = new DeliveryData();
+        public DeliveryData DeliveryData
+        {
+            get { return deliveryData; }
+        }
+
+        /*
         public UnitOfWork(DeliveryData context)
         {
             _deliveryData = context;
@@ -93,5 +100,6 @@ namespace DAL.Repository
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+        */
     }
 }

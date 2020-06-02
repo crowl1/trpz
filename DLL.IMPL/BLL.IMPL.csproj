@@ -43,11 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StorageMapper.cs" />
-    <Compile Include="OrderMapper.cs" />
-    <Compile Include="DriverMapper.cs" />
-    <Compile Include="ManagerMapper.cs" />
-    <Compile Include="GoodMapper.cs" />
+    <Compile Include="Mapper\IMapper.cs" />
+    <Compile Include="Service\GoodService.cs" />
+    <Compile Include="Mapper\StorageMapper.cs" />
+    <Compile Include="Mapper\OrderMapper.cs" />
+    <Compile Include="Mapper\DriverMapper.cs" />
+    <Compile Include="Mapper\ManagerMapper.cs" />
+    <Compile Include="Mapper\GoodMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +57,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL.Impl\DAL.Impl.csproj">
+      <Project>{488cb45f-0e2a-421c-96b9-220e702ea612}</Project>
+      <Name>DAL.Impl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interface\Entities.csproj">
       <Project>{0e030d5d-05c7-46ee-8f16-1468d1d499d8}</Project>
       <Name>Entities</Name>
@@ -63,9 +69,9 @@
       <Project>{22B4FC27-D3C4-427E-BA76-E42091BB0ADF}</Project>
       <Name>M</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UoW\DAL.csproj">
-      <Project>{8D97B042-C05B-4743-970E-E9A90828ADBD}</Project>
-      <Name>DAL</Name>
+    <ProjectReference Include="..\UoW\DAL.Abstract.csproj">
+      <Project>{8d97b042-c05b-4743-970e-e9a90828adbd}</Project>
+      <Name>DAL.Abstract</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

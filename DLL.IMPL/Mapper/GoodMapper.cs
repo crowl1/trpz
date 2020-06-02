@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Entities;
 using M;
 
-namespace BLL.IMPL
+namespace BLL.IMPL.Mapper
 {
     public class GoodMapper
     {
