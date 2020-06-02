@@ -14,5 +14,9 @@ namespace BLL.IMPL
         {
             return new GoodE { ID = good.ID, Name = good.Name, ExecutionTime = good.ExecutionTime };
         }
+        public GoodDTO GoodE2GoodDTO (GoodE good)
+        {
+            return new GoodDTO { ID = good.ID, Name = good.Name, ExecutionTime = good.ExecutionTime };
+        }
     }
 }

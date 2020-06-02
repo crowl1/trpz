@@ -49,7 +49,6 @@
     <Compile Include="IOrderService.cs" />
     <Compile Include="IDriverService.cs" />
     <Compile Include="IGoodService.cs" />
-    <Compile Include="IMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

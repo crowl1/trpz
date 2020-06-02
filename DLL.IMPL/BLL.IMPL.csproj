@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StorageMapper.cs" />
+    <Compile Include="OrderMapper.cs" />
+    <Compile Include="DriverMapper.cs" />
+    <Compile Include="ManagerMapper.cs" />
     <Compile Include="GoodMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

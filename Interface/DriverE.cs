@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class DriverE
+    public class DriverE
     {
         [Key]
         public int ID { get; set; }

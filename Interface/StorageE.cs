@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class StorageE
+    public class StorageE
     {
         [Key]
         public int ID { get; set; }
