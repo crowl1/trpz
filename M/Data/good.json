@@ -1,0 +1,17 @@
+[
+  {
+    "ID": 0,
+    "Name": "Молоко",
+    "ExecutionTime": 150000,
+  },
+  {
+    "ID": 0,
+    "Name": "Хліб",
+    "ExecutionTime": 250000,
+  },
+  {
+    "ID": 2,
+    "Name": "Торти",
+    "ExecutionTime": 450000,
+  },
+]

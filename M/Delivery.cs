@@ -9,13 +9,18 @@ namespace M
 {
     public class Delivery
     {
-        public ObservableCollection<Manager> ManagersM { get; set; }
-        public ObservableCollection<Driver> DriversM { get; set; }
+        public ObservableCollection<ManagerDTO> ManagersM { get; set; }
+        public ObservableCollection<DriverDTO> DriversM { get; set; }
         public Delivery()
         {
-            ManagersM = new Managers();
-            DriversM = new Drivers();
+            if (ManagersM == null)
+            {
+                ManagersM = Files<ManagerDTO>.Read("\\manager.json");
+                DriversM = Files<DriverDTO>.Read("\\driver.json");
+            }
         }
+
+
         public long orderProcessing(int meters, int TimeGood)
         {
             return TimeGood + Math.Min(ManagerCalculation(), DriverCalculation(meters));
@@ -29,7 +34,7 @@ namespace M
         {
             manager_time.Clear();
 
-            foreach (Manager m in ManagersM) //наповнюється додатковий список, який потрібен для знаходження min значення
+            foreach (ManagerDTO m in ManagersM) //наповнюється додатковий список, який потрібен для знаходження min значення
             {
                 manager_time.Add(m.ReleaseTime);
             }
@@ -37,11 +42,15 @@ namespace M
             long time_left = manager_time.Min();
 
 
-            foreach (Manager m in ManagersM)
+            foreach (ManagerDTO m in ManagersM)
             {
                 if (m.ReleaseTime == time_left)
                 {
-                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= m.ReleaseTime)
+                    if (m.ReleaseTime == 0)
+                    {
+                        m.ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                    }
+                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() <= m.ReleaseTime)
                     {
                         m.ReleaseTime += m.ExecutionTime;
                     }
@@ -60,7 +69,7 @@ namespace M
         {
             driver_time.Clear();
 
-            foreach (Driver d in DriversM)
+            foreach (DriverDTO d in DriversM)
             {
                 driver_time.Add(d.ReleaseTime);
             }
@@ -68,12 +77,15 @@ namespace M
             long time_left = driver_time.Min();
 
 
-            foreach (Driver d in DriversM)
+            foreach (DriverDTO d in DriversM)
             {
                 if (d.ReleaseTime == time_left)
                 {
-                    Console.WriteLine(d.ReleaseTime);
-                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= d.ReleaseTime)
+                    if (d.ReleaseTime == 0)
+                    {
+                        d.ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                    }
+                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() <= d.ReleaseTime)
                     {
                         d.ReleaseTime += meters / d.MpS;
                     }

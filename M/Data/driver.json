@@ -1,0 +1,32 @@
+[
+  {
+    "ID": 0,
+    "Name": "Олександр",
+    "MpS": 30,
+    "ReleaseTime": 0,
+  },
+  {
+    "ID": 0,
+    "Name": "Роман",
+    "MpS": 20,
+    "ReleaseTime": 0,
+  },
+  {
+    "ID": 2,
+    "Name": "Олексій",
+    "MpS": 50,
+    "ReleaseTime": 0,
+  },
+  {
+    "ID": 3,
+    "Name": "Антон",
+    "MpS": 40,
+    "ReleaseTime": 0,
+  },
+  {
+    "ID": 4,
+    "Name": "Андрій",
+    "MpS": 50,
+    "ReleaseTime": 0,
+  },
+]

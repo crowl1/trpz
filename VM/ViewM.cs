@@ -15,16 +15,15 @@ namespace VM
     {
         static void Main(string[] args)
         {
-
         }
         Delivery delivery = new Delivery();
 
 
-        public ObservableCollection<Order> OrdersVM { get; set; }
+        public ObservableCollection<OrderDTO> OrdersVM { get; set; }
         
 
-        private Order _selectedOrder;
-        public Order SelectedOrder
+        private OrderDTO _selectedOrder;
+        public OrderDTO SelectedOrder
         {
             get { return _selectedOrder; }
             set
@@ -34,9 +33,9 @@ namespace VM
             }
         }
 
-        private Good _selectedGood;
-        public ObservableCollection<Good> GoodsVM { get; set; }
-        public Good SelectedGood
+        private GoodDTO _selectedGood;
+        public ObservableCollection<GoodDTO> GoodsVM { get; set; }
+        public GoodDTO SelectedGood
         {
             get { return _selectedGood; }
             set
@@ -60,9 +59,9 @@ namespace VM
         }
 
 
-        private Storage _selectedStorage;
-        public ObservableCollection<Storage> StoragesVM { get; set; }
-        public Storage SelectedStorage
+        private StorageDTO _selectedStorage;
+        public ObservableCollection<StorageDTO> StoragesVM { get; set; }
+        public StorageDTO SelectedStorage
         {
             get { return _selectedStorage; }
             set
@@ -83,8 +82,8 @@ namespace VM
                 return _addCommand ??
                     (_addCommand = new RelayCommand(obj =>
                     {
-                        OrdersVM.Insert(OrdersVM.Count, new Order {ID = OrdersVM.Count(), NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime) });
-                        Json.Jsons(OrdersVM);
+                        OrdersVM.Insert(OrdersVM.Count, new OrderDTO {ID = OrdersVM.Count(), NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime), GoodID = SelectedGood.ID, StarageID = SelectedStorage.ID });
+                        Files<OrderDTO>.Write(OrdersVM, "\\order.json");
                     }));
             }
         }
@@ -96,9 +95,13 @@ namespace VM
 
         public ViewM()
         {
-            StoragesVM = new Storages();
-            GoodsVM = new Goods();
-            OrdersVM = new ObservableCollection<Order> { };
+            if (OrdersVM == null)
+            {
+                GoodsVM = Files<GoodDTO>.Read("\\good.json");
+                StoragesVM = Files<StorageDTO>.Read("\\storage.json");
+                OrdersVM = Files<OrderDTO>.Read("\\order.json");
+            }
+            
 
             SelectedStorage = StoragesVM.FirstOrDefault();
             SelectedGood = GoodsVM.FirstOrDefault();

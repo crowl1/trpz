@@ -47,21 +47,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Delivery.cs" />
-    <Compile Include="Drivers.cs" />
-    <Compile Include="Driver.cs" />
-    <Compile Include="Good.cs" />
-    <Compile Include="Goods.cs" />
+    <Compile Include="DriverDTO.cs" />
+    <Compile Include="GoodDTO.cs" />
     <Compile Include="Json.cs" />
-    <Compile Include="Manager.cs" />
-    <Compile Include="Managers.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="ManagerDTO.cs" />
+    <Compile Include="OrderDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Storage.cs" />
-    <Compile Include="Storages.cs" />
+    <Compile Include="StorageDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Data\driver.json" />
+    <None Include="Data\good.json" />
+    <None Include="Data\manager.json" />
+    <None Include="Data\order.json" />
+    <None Include="Data\storage.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
