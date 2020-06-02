@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.IRepository
 {
-    public interface IOrderRepository : IGenericRepository<Order>
+    public interface IOrderRepository : IGenericRepository<OrderDTO>
     {
     }
 }

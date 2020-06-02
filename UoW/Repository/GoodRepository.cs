@@ -8,7 +8,7 @@ using M;
 
 namespace DAL.Repository
 {
-    public class GoodRepository : GenericRepository<Good>, IGoodRepository
+    public class GoodRepository : GenericRepository<GoodDTO>, IGoodRepository
     {
         public GoodRepository(DeliveryData context) : base(context)
         {

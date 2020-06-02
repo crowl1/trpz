@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace DAL.IRepository
+
+namespace BLL.Abstract
 {
-    public interface IStorageRepository : IGenericRepository<StorageDTO>
+    public interface IDriverService : IGenintericService<DriverDTO>
     {
     }
 }

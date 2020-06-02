@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace M
 {
-    public class Good
+    public class StorageDTO
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int ExecutionTime { get; set; }
+        public int Distance { get; set; }
     }
 }

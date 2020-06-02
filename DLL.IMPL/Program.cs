@@ -1,13 +1,15 @@
-﻿using M;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.IRepository
+namespace BLL.IMPL
 {
-    public interface IGoodRepository : IGenericRepository<GoodDTO>
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

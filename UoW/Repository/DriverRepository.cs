@@ -8,7 +8,7 @@ using M;
 
 namespace DAL.Repository
 {
-    public class DriverRepository : GenericRepository<Driver>, IDriverRepository
+    public class DriverRepository : GenericRepository<DriverDTO>, IDriverRepository
     {
         public DriverRepository(DeliveryData context) : base(context)
         {

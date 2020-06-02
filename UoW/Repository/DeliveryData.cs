@@ -15,10 +15,10 @@ namespace DAL.Repository
         {
         }
 
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<Storage> Storages{ get; set; }
-        public DbSet<Manager> Managers{ get; set; }
-        public DbSet<Good> Goods{ get; set; }
-        public DbSet<Driver> Drivers{ get; set; }
+        public DbSet<OrderDTO> Orders { get; set; }
+        public DbSet<StorageDTO> Storages{ get; set; }
+        public DbSet<ManagerDTO> Managers{ get; set; }
+        public DbSet<GoodDTO> Goods{ get; set; }
+        public DbSet<DriverDTO> Drivers{ get; set; }
     }
 }

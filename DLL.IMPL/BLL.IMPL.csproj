@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F574938-9790-49A3-90D8-2631A1B9678C}</ProjectGuid>
+    <ProjectGuid>{CC6CD629-D547-4345-8C9F-27E8E73192BE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Mapper</RootNamespace>
-    <AssemblyName>Mapper</AssemblyName>
+    <RootNamespace>DLL.IMPL</RootNamespace>
+    <AssemblyName>DLL.IMPL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMapper.cs" />
+    <Compile Include="GoodMapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interface\Entities.csproj">
+      <Project>{0e030d5d-05c7-46ee-8f16-1468d1d499d8}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\M\M.csproj">
+      <Project>{22B4FC27-D3C4-427E-BA76-E42091BB0ADF}</Project>
+      <Name>M</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

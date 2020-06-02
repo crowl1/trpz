@@ -8,7 +8,7 @@ using M;
 
 namespace DAL.Repository
 {
-    public class ManagerRepository : GenericRepository<Manager>, IManagerRepository
+    public class ManagerRepository : GenericRepository<ManagerDTO>, IManagerRepository
     {
         public ManagerRepository(DeliveryData context) : base(context)
         {

@@ -8,7 +8,7 @@ using M;
 
 namespace DAL.Repository
 {
-    public class StorageRepository : GenericRepository<Storage>, IStorageRepository
+    public class StorageRepository : GenericRepository<StorageDTO>, IStorageRepository
     {
         public StorageRepository(DeliveryData context) : base(context)
         {

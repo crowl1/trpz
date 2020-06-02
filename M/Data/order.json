@@ -313,5 +313,12 @@
     "TimeLeft": 1591158615,
     "StarageID": 0,
     "GoodID": 0
+  },
+  {
+    "ID": 45,
+    "NameCustomer": "Анонімssss",
+    "TimeLeft": 1591270010,
+    "StarageID": 2,
+    "GoodID": 0
   }
 ]

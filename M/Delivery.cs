@@ -9,14 +9,14 @@ namespace M
 {
     public class Delivery
     {
-        public ObservableCollection<Manager> ManagersM { get; set; }
-        public ObservableCollection<Driver> DriversM { get; set; }
+        public ObservableCollection<ManagerDTO> ManagersM { get; set; }
+        public ObservableCollection<DriverDTO> DriversM { get; set; }
         public Delivery()
         {
             if (ManagersM == null)
             {
-                ManagersM = Files<Manager>.Read("\\manager.json");
-                DriversM = Files<Driver>.Read("\\driver.json");
+                ManagersM = Files<ManagerDTO>.Read("\\manager.json");
+                DriversM = Files<DriverDTO>.Read("\\driver.json");
             }
         }
 
@@ -34,7 +34,7 @@ namespace M
         {
             manager_time.Clear();
 
-            foreach (Manager m in ManagersM) //наповнюється додатковий список, який потрібен для знаходження min значення
+            foreach (ManagerDTO m in ManagersM) //наповнюється додатковий список, який потрібен для знаходження min значення
             {
                 manager_time.Add(m.ReleaseTime);
             }
@@ -42,7 +42,7 @@ namespace M
             long time_left = manager_time.Min();
 
 
-            foreach (Manager m in ManagersM)
+            foreach (ManagerDTO m in ManagersM)
             {
                 if (m.ReleaseTime == time_left)
                 {
@@ -69,7 +69,7 @@ namespace M
         {
             driver_time.Clear();
 
-            foreach (Driver d in DriversM)
+            foreach (DriverDTO d in DriversM)
             {
                 driver_time.Add(d.ReleaseTime);
             }
@@ -77,7 +77,7 @@ namespace M
             long time_left = driver_time.Min();
 
 
-            foreach (Driver d in DriversM)
+            foreach (DriverDTO d in DriversM)
             {
                 if (d.ReleaseTime == time_left)
                 {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.IRepository
 {
-    public interface IManagerRepository : IGenericRepository<Manager>
+    public interface IManagerRepository : IGenericRepository<ManagerDTO>
     {
     }
 }
