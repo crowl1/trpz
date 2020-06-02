@@ -334,5 +334,19 @@
     "TimeLeft": 1591266102,
     "StorageIN": null,
     "GoodIN": null
+  },
+  {
+    "ID": 48,
+    "NameCustomer": "Анонімgvccvcvvc",
+    "TimeLeft": 1591266488,
+    "StorageIN": null,
+    "GoodIN": null
+  },
+  {
+    "ID": 49,
+    "NameCustomer": "Анонім",
+    "TimeLeft": 1591286684,
+    "StorageIN": null,
+    "GoodIN": null
   }
 ]

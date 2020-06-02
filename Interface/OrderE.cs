@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    class OrderE
+    public class OrderE
     {
         [Key]
         public int ID { get; set; }
@@ -23,7 +23,7 @@ namespace Entities
         public int Good { get; set; }
         [ForeignKey(nameof(Manager))]
 
-        public ManagerE ManagerID { get; set; }
+        public StorageE StorageID { get; set; }
         [ForeignKey(nameof(Good))]
         public GoodE GoodID { get; set; }
     }
