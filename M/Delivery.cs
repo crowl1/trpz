@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using M.Data;
 
 namespace M
 {
@@ -16,12 +15,12 @@ namespace M
         {
             if (ManagersM == null)
             {
-                string BaseDirectory = Directory.Dir();
-
-                ManagersM = Jsons<Manager>.Read(BaseDirectory + "\\manager.json");
-                DriversM = Jsons<Driver>.Read(BaseDirectory + "\\driver.json");
+                ManagersM = Files<Manager>.Read("\\manager.json");
+                DriversM = Files<Driver>.Read("\\driver.json");
             }
         }
+
+
         public long orderProcessing(int meters, int TimeGood)
         {
             return TimeGood + Math.Min(ManagerCalculation(), DriverCalculation(meters));
@@ -51,7 +50,7 @@ namespace M
                     {
                         m.ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
                     }
-                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= m.ReleaseTime)
+                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() <= m.ReleaseTime)
                     {
                         m.ReleaseTime += m.ExecutionTime;
                     }
@@ -86,7 +85,7 @@ namespace M
                     {
                         d.ReleaseTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
                     }
-                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() >= d.ReleaseTime)
+                    if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() <= d.ReleaseTime)
                     {
                         d.ReleaseTime += meters / d.MpS;
                     }

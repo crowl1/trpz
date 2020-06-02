@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using M;
 using Infrastructure;
-using M.Data;
 
 namespace VM
 {
@@ -84,7 +83,7 @@ namespace VM
                     (_addCommand = new RelayCommand(obj =>
                     {
                         OrdersVM.Insert(OrdersVM.Count, new Order {ID = OrdersVM.Count(), NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime), GoodID = SelectedGood.ID, StarageID = SelectedStorage.ID });
-                        Jsons<Order>.Write(OrdersVM, Directory.Dir() + "\\order.json");
+                        Files<Order>.Write(OrdersVM, "\\order.json");
                     }));
             }
         }
@@ -98,11 +97,9 @@ namespace VM
         {
             if (OrdersVM == null)
             {
-                string BaseDirectory = Directory.Dir();
-
-                GoodsVM = Jsons<Good>.Read(BaseDirectory + "\\good.json");
-                StoragesVM = Jsons<Storage>.Read(BaseDirectory + "\\storage.json");
-                OrdersVM = Jsons<Order>.Read(BaseDirectory + "\\order.json");
+                GoodsVM = Files<Good>.Read("\\good.json");
+                StoragesVM = Files<Storage>.Read("\\storage.json");
+                OrdersVM = Files<Order>.Read("\\order.json");
             }
             
 
