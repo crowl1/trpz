@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.IRepository;
-using DAL.Repository;
+//using DAL.IRepository;
+//using DAL.Repository;
 using Entities;
 using M;
 

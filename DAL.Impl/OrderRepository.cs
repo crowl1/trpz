@@ -24,7 +24,7 @@ namespace DAL.Impl
 
         public IEnumerable<OrderE> GetAll()
         {
-            return UoW.DeliveryData.Orders.Include(p => p.Storage).ToList();
+            return UoW.DeliveryData.Orders.Include(p => p.Storage).Include(o => o.Good).ToList();
         }
 
         public OrderE Read()

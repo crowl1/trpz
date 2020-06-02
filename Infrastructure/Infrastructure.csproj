@@ -48,7 +48,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\Interface\Entities.csproj">
+      <Project>{0E030D5D-05C7-46EE-8F16-1468D1D499D8}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\M\M.csproj">
+      <Project>{22B4FC27-D3C4-427E-BA76-E42091BB0ADF}</Project>
+      <Name>M</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using DAL.Abstract;
 using DAL.Impl;
 using M;
+using BLL.Abstract;
 
 namespace DLL.IMPL.Service
 {
-    class GoodService
+    public class GoodService : IGoodService
     {
         GoodMapper goodMapper = new GoodMapper();
         IGoodRepository goodRepository = new GoodRepository();

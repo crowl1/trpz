@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using DAL.Abstract;
 using DAL.Impl;
 using M;
+using BLL.Abstract;
 
 namespace DLL.IMPL.Service
 {
-    class OrderService
+    public class OrderService: IOrderService
     {
         OrderMapper _orderMapper = new OrderMapper();
         IOrderRepository _orderRepository = new OrderRepository();

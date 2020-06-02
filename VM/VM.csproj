@@ -43,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewM.cs" />
+    <Compile Include="...ViewM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="...App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DLL.IMPL\BLL.IMPL.csproj">
+      <Project>{cc6cd629-d547-4345-8c9f-27e8e73192be}</Project>
+      <Name>BLL.IMPL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{b57be8da-654e-400d-b51d-8b8a58e7751d}</Project>
       <Name>Infrastructure</Name>
@@ -57,6 +61,10 @@
     <ProjectReference Include="..\M\M.csproj">
       <Project>{22b4fc27-d3c4-427e-ba76-e42091bb0adf}</Project>
       <Name>M</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\BLL.Abstract.csproj">
+      <Project>{2F574938-9790-49A3-90D8-2631A1B9678C}</Project>
+      <Name>BLL.Abstract</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

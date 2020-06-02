@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using DAL.Abstract;
 using DAL.Impl;
 using M;
+using BLL.Abstract;
 
 namespace DLL.IMPL.Service
 {
-    class DriverService
+    public class DriverService: IDriverService
     {
         DriverMapper _driverMapper = new DriverMapper();
         IDriverRepository _driverRepository = new DriverRepository();

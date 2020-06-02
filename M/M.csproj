@@ -57,7 +57,6 @@
     <Compile Include="StorageDTO.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="Data\driver.json" />
     <None Include="Data\good.json" />
     <None Include="Data\manager.json" />

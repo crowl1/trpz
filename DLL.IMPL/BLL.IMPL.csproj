@@ -58,9 +58,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DAL.Impl\DAL.Impl.csproj">
       <Project>{488cb45f-0e2a-421c-96b9-220e702ea612}</Project>
       <Name>DAL.Impl</Name>
@@ -72,6 +69,10 @@
     <ProjectReference Include="..\M\M.csproj">
       <Project>{22B4FC27-D3C4-427E-BA76-E42091BB0ADF}</Project>
       <Name>M</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\BLL.Abstract.csproj">
+      <Project>{2F574938-9790-49A3-90D8-2631A1B9678C}</Project>
+      <Name>BLL.Abstract</Name>
     </ProjectReference>
     <ProjectReference Include="..\UoW\DAL.Abstract.csproj">
       <Project>{8d97b042-c05b-4743-970e-e9a90828adbd}</Project>

@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using DAL.Abstract;
 using DAL.Impl;
 using M;
+using BLL.Abstract;
 
 namespace DLL.IMPL.Service
 {
-    class ManagerService
+    public class ManagerService: IManagerService
     {
         ManagerMapper _managerMapper = new ManagerMapper();
         IManagerRepository _managerRepository = new ManagerRepository();

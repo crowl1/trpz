@@ -1,0 +1,10 @@
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\BLL.Abstract.exe
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\BLL.Abstract.pdb
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\M.exe
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\Newtonsoft.Json.dll
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\M.pdb
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\Newtonsoft.Json.xml
+C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.csprojAssemblyReference.cache
+C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.csproj.CopyComplete
+C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.exe
+C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.pdb

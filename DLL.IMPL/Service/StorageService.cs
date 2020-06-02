@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 using DAL.Abstract;
 using DAL.Impl;
 using M;
+using BLL.Abstract;
 
 namespace DLL.IMPL.Service
 {
-    class StorageService
+    public class StorageService: IStorageService
     {
         StorageMapper _storageMapper = new StorageMapper();
         IStorageRepository _storageRepository = new StorageRepository();
