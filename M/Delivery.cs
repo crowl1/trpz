@@ -9,8 +9,6 @@ namespace M
 {
     public class Delivery
     {
-
-
         public ObservableCollection<ManagerDTO> ManagersM { get; set; }
         public ObservableCollection<DriverDTO> DriversM { get; set; }
         public Delivery()
