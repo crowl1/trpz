@@ -11,6 +11,7 @@ namespace DAL.Impl
 {
     public class OrderRepository : IOrderRepository
     {
+        DeliveryData context = new DeliveryData();
         UnitOfWork UoW = new UnitOfWork();
         public void Create(OrderE obj)
         {
@@ -24,7 +25,9 @@ namespace DAL.Impl
 
         public IEnumerable<OrderE> GetAll()
         {
-            return UoW.DeliveryData.Orders.Include(p => p.Storage).Include(o => o.Good).ToList();
+            var a = context.Orders.Include(p => p.StorageID).Include(o => o.GoodID).ToList();
+            return a;
+            //return UoW.DeliveryData.Orders.Include(p => p.Storage).Include(o => o.Good).ToList();
         }
 
         public OrderE Read()

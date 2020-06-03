@@ -8,3 +8,9 @@ C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.csprojAssembly
 C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.csproj.CopyComplete
 C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.exe
 C:\Users\crowli\source\repos\trpz\Services\obj\Debug\BLL.Abstract.pdb
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\BLL.Abstract.exe.config
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\EntityFramework.dll
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\M.exe.config
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\EntityFramework.xml
+C:\Users\crowli\source\repos\trpz\Services\bin\Debug\EntityFramework.SqlServer.xml

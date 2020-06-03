@@ -6,3 +6,8 @@ C:\Users\crowli\source\repos\trpz\M\obj\Debug\M.pdb
 C:\Users\crowli\source\repos\trpz\M\bin\Debug\Newtonsoft.Json.dll
 C:\Users\crowli\source\repos\trpz\M\bin\Debug\Newtonsoft.Json.xml
 C:\Users\crowli\source\repos\trpz\M\obj\Debug\M.csproj.CopyComplete
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\M.exe.config
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\EntityFramework.dll
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\EntityFramework.xml
+C:\Users\crowli\source\repos\trpz\M\bin\Debug\EntityFramework.SqlServer.xml

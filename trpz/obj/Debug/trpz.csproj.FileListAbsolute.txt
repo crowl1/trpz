@@ -32,3 +32,10 @@ C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\DAL.pdb
 C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\DAL.Impl.pdb
 C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\DAL.Impl.exe.config
 C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\EntityFramework.xml
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\DLL.IMPL.exe.config
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\Infrastructure.exe.config
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\M.exe.config
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\BLL.Abstract.exe.config
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\crowli\source\repos\trpz\trpz\bin\Debug\Entities.exe.config

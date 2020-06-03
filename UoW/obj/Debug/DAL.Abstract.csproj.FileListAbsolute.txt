@@ -14,3 +14,5 @@ C:\Users\crowli\source\repos\trpz\UoW\obj\Debug\DAL.Abstract.csprojAssemblyRefer
 C:\Users\crowli\source\repos\trpz\UoW\obj\Debug\DAL.Abstract.csproj.CopyComplete
 C:\Users\crowli\source\repos\trpz\UoW\obj\Debug\DAL.exe
 C:\Users\crowli\source\repos\trpz\UoW\obj\Debug\DAL.pdb
+C:\Users\crowli\source\repos\trpz\UoW\bin\Debug\Entities.exe.config
+C:\Users\crowli\source\repos\trpz\UoW\bin\Debug\M.exe.config

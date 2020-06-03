@@ -19,3 +19,9 @@ C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\Newtonsoft.Json.xml
 C:\Users\crowli\source\repos\trpz\DLL.IMPL\obj\Debug\BLL.IMPL.csproj.CopyComplete
 C:\Users\crowli\source\repos\trpz\DLL.IMPL\obj\Debug\DLL.IMPL.exe
 C:\Users\crowli\source\repos\trpz\DLL.IMPL\obj\Debug\DLL.IMPL.pdb
+C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\DLL.IMPL.exe.config
+C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\Entities.exe.config
+C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\M.exe.config
+C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\BLL.Abstract.exe.config
+C:\Users\crowli\source\repos\trpz\DLL.IMPL\bin\Debug\EntityFramework.SqlServer.xml
