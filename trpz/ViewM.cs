@@ -18,8 +18,6 @@ namespace trpz
         Delivery delivery = new Delivery();
 
         IGoodService _goodService = new GoodService();
-        IDriverService _driverService = new DriverService();
-        IManagerService _managerService = new ManagerService();
         IStorageService _storageService = new StorageService();
         IOrderService _orderService = new OrderService();
 
