@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using DAL.IRepository;
-//using DAL.Repository;
 using Entities;
 using M;
 
@@ -17,12 +15,12 @@ namespace BLL.IMPL.Mapper
 
         public OrderDTO OrderE2OrderDTO (OrderE order)
         {
-            return new OrderDTO { ID = order.ID, NameCustomer = order.NameCustomer, TimeLeft = order.TimeLeft, GoodIN = goodMapper.GoodE2GoodDTO(order.GoodID), StorageIN = storageMapper.StorageE2StorageDTO(order.StorageID) };
+            return new OrderDTO { ID = order.ID, NameCustomer = order.NameCustomer, TimeLeft = order.TimeLeft, GoodIN = order.Good, StorageIN = order.Storage };
         }
 
         public OrderE OrderDTO2OrderE(OrderDTO order)
         {
-            return new OrderE { ID = order.ID, NameCustomer = order.NameCustomer, TimeLeft = order.TimeLeft, GoodID = goodMapper.GoodDTO2GoodE(order.GoodIN), StorageID = storageMapper.StorageDTO2StorageE(order.StorageIN) };
+            return new OrderE { ID = order.ID, NameCustomer = order.NameCustomer, TimeLeft = order.TimeLeft, Good = order.GoodIN, Storage = order.StorageIN };
         }
     }
 }

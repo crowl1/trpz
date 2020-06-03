@@ -56,7 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Delivery.cs" />
     <Compile Include="DriverDTO.cs" />
     <Compile Include="GoodDTO.cs" />
     <Compile Include="Json.cs" />

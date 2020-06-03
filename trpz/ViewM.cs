@@ -24,14 +24,7 @@ namespace trpz
 
 
 
-        public ObservableCollection<OrderDTO> OrdersVM
-        {
-            get
-            {
-                return new ObservableCollection<OrderDTO>(_orderService.GetAll());
-            }
-            set { }
-        }
+        public ObservableCollection<OrderDTO> OrdersVM { get; set; }
         
 
         private OrderDTO _selectedOrder;
@@ -46,14 +39,7 @@ namespace trpz
         }
 
         private GoodDTO _selectedGood;
-        public ObservableCollection<GoodDTO> GoodsVM
-        {
-            get
-            {
-                return new ObservableCollection<GoodDTO>(_goodService.GetAll());
-            }
-            set { }
-        }
+        public ObservableCollection<GoodDTO> GoodsVM { get; set; }
         public GoodDTO SelectedGood
         {
             get { return _selectedGood; }
@@ -79,14 +65,7 @@ namespace trpz
 
 
         private StorageDTO _selectedStorage;
-        public ObservableCollection<StorageDTO> StoragesVM
-        {
-            get
-            {
-                return new ObservableCollection<StorageDTO>(_storageService.GetAll());
-            }
-            set { }
-        }
+        public ObservableCollection<StorageDTO> StoragesVM{ get; set; }
         public StorageDTO SelectedStorage
         {
             get { return _selectedStorage; }
@@ -108,8 +87,16 @@ namespace trpz
                 return _addCommand ??
                     (_addCommand = new RelayCommand(obj =>
                     {
-                        OrdersVM.Insert(OrdersVM.Count, new OrderDTO {ID = OrdersVM.Count(), NameCustomer = Сustomer, TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime), GoodIN = SelectedGood, StorageIN = SelectedStorage });
-                        Files<OrderDTO>.Write(OrdersVM, "\\order.json");
+                        OrderDTO newOrder = new OrderDTO
+                        {
+                            ID = OrdersVM.Count(),
+                            NameCustomer = Сustomer,
+                            TimeLeft = delivery.orderProcessing(SelectedStorage.Distance, SelectedGood.ExecutionTime),
+                            GoodIN = SelectedGood.ID,
+                            StorageIN = SelectedStorage.ID
+                        };
+                        OrdersVM.Insert(OrdersVM.Count, newOrder);
+                        _orderService.Create(newOrder);
                     }));
             }
         }
@@ -121,14 +108,9 @@ namespace trpz
 
         public ViewM()
         {
-            if (OrdersVM == null)
-            {
-                //GoodsVM = Files<GoodDTO>.Read("\\good.json");
-                //StoragesVM = Files<StorageDTO>.Read("\\storage.json");
-                //OrdersVM = Files<OrderDTO>.Read("\\order.json");
-            }
-            
-
+            GoodsVM = new ObservableCollection<GoodDTO>(_goodService.GetAll());
+            StoragesVM = new ObservableCollection<StorageDTO>(_storageService.GetAll());
+            OrdersVM = new ObservableCollection<OrderDTO>(_orderService.GetAll());
             SelectedStorage = StoragesVM.FirstOrDefault();
             SelectedGood = GoodsVM.FirstOrDefault();
             _customer = "Анонім";

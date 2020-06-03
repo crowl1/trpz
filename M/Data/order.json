@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "ID": 6,
+    "NameCustomer": "Петро",
+    "TimeLeft": 3239029,
+    "StorageIN": {
+      "ID": 1,
+      "Name": "Склад у Києві",
+      "Distance": 10000
+    },
+    "GoodIN": {
+      "ID": 2,
+      "Name": "Хліб",
+      "ExecutionTime": 20000
+    }
+  },
+  {
+    "ID": 7,
+    "NameCustomer": "Name",
+    "TimeLeft": 1591232450,
+    "StorageIN": {
+      "ID": 3,
+      "Name": "Склад у Києві",
+      "Distance": 10000
+    },
+    "GoodIN": {
+      "ID": 3,
+      "Name": "Молока",
+      "ExecutionTime": 10000
+    }
+  }
+]

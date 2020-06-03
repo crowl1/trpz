@@ -54,9 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Container.cs" />
     <Compile Include="DeliveryData.cs" />
-    <Compile Include="GenericRepository.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="StorageRepository.cs" />
     <Compile Include="ManagerRepository.cs" />

@@ -1,24 +1,35 @@
-﻿using System;
+﻿using BLL.Abstract;
+using DLL.IMPL.Service;
+using M;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace M
+namespace trpz
 {
     public class Delivery
     {
-        public ObservableCollection<ManagerDTO> ManagersM { get; set; }
-        public ObservableCollection<DriverDTO> DriversM { get; set; }
-        public Delivery()
+        IManagerService _managerService = new ManagerService();
+        IDriverService _driverService = new DriverService();
+        public ObservableCollection<ManagerDTO> ManagersM
         {
-            if (ManagersM == null)
+            get
             {
-                ManagersM = Files<ManagerDTO>.Read("\\manager.json");
-                DriversM = Files<DriverDTO>.Read("\\driver.json");
+                return new ObservableCollection<ManagerDTO>(_managerService.GetAll());
+            }
+            set { }
+        }
+        public ObservableCollection<DriverDTO> DriversM
+        {
+            get
+            {
+                return new ObservableCollection<DriverDTO>(_driverService.GetAll());
             }
         }
+
 
 
         public long orderProcessing(int meters, int TimeGood)

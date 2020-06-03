@@ -27,6 +27,7 @@ namespace M
             return Directory;
         }
 
+
         public static void Write(ObservableCollection<T> OrdersVM, string path)
         {
             File.WriteAllText(Dir() + path,(JsonConvert.SerializeObject(OrdersVM, Formatting.Indented)));

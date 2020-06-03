@@ -19,9 +19,7 @@ C:\Users\crowli\source\repos\trpz\DAL.Impl\obj\Debug\DAL.Impl.csprojAssemblyRefe
 C:\Users\crowli\source\repos\trpz\DAL.Impl\obj\Debug\DAL.Impl.csproj.CopyComplete
 C:\Users\crowli\source\repos\trpz\DAL.Impl\obj\Debug\DAL.Impl.exe
 C:\Users\crowli\source\repos\trpz\DAL.Impl\obj\Debug\DAL.Impl.pdb
-C:\Users\crowli\source\repos\trpz\DAL.Impl\bin\Debug\Entities.exe.config
 C:\Users\crowli\source\repos\trpz\DAL.Impl\bin\Debug\M.exe.config
-C:\Users\crowli\source\repos\trpz\DAL.Impl\bin\Debug\BLL.Abstract.exe.config
 C:\Users\CSharpSila\Desktop\trpz\DAL.Impl\bin\Debug\DAL.Impl.exe.config
 C:\Users\CSharpSila\Desktop\trpz\DAL.Impl\bin\Debug\DAL.Impl.exe
 C:\Users\CSharpSila\Desktop\trpz\DAL.Impl\bin\Debug\DAL.Impl.pdb

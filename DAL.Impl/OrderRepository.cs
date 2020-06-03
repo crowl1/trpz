@@ -12,10 +12,10 @@ namespace DAL.Impl
     public class OrderRepository : IOrderRepository
     {
         DeliveryData context = new DeliveryData();
-        UnitOfWork UoW = new UnitOfWork();
         public void Create(OrderE obj)
         {
-            throw new NotImplementedException();
+            context.Orders.Add(obj);
+            context.SaveChanges();
         }
 
         public void Delete(int id)
@@ -25,9 +25,7 @@ namespace DAL.Impl
 
         public IEnumerable<OrderE> GetAll()
         {
-            var b = context.Orders.ToList();
-            var a = context.Orders.Include(p => p.StorageID).Include(o => o.GoodID).ToList();
-            return a;
+            return context.Orders.ToList();
         }
 
         public OrderE Read()

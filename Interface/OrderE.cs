@@ -22,10 +22,5 @@ namespace Entities
         public int Storage { get; set; }
         [Required]
         public int Good { get; set; }
-
-        [ForeignKey("Storage")]
-        public StorageE StorageID { get; set; }
-        [ForeignKey(nameof(Good))]
-        public GoodE GoodID { get; set; }
     }
 }

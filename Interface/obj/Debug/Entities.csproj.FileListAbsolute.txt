@@ -3,7 +3,6 @@ C:\Users\crowli\source\repos\trpz\Interface\bin\Debug\Entities.pdb
 C:\Users\crowli\source\repos\trpz\Interface\obj\Debug\Entities.csprojAssemblyReference.cache
 C:\Users\crowli\source\repos\trpz\Interface\obj\Debug\Entities.exe
 C:\Users\crowli\source\repos\trpz\Interface\obj\Debug\Entities.pdb
-C:\Users\crowli\source\repos\trpz\Interface\bin\Debug\Entities.exe.config
 C:\Users\crowli\source\repos\trpz\Interface\bin\Debug\EntityFramework.dll
 C:\Users\crowli\source\repos\trpz\Interface\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\crowli\source\repos\trpz\Interface\bin\Debug\EntityFramework.xml

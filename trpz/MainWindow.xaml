@@ -24,9 +24,9 @@
                  SelectedItem="{Binding SelectedStorage}" Margin="0,0,10.2,387.4" RenderTransformOrigin="0.5,0.5" Height="222" VerticalAlignment="Bottom" Grid.ColumnSpan="2"  >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="5">
+                    <StackPanel Margin="1">
                         <TextBlock FontSize="18" Text="{Binding Path=Name}" />
-                        <TextBlock FontSize="18" Text="{Binding Path=Distance}" />
+                        <TextBlock FontSize="16" Text="{Binding Path=Distance}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -38,7 +38,7 @@
                 <DataTemplate>
                     <StackPanel Margin="5">
                         <TextBlock FontSize="18" Text="{Binding Path=Name}" />
-                        <TextBlock FontSize="18" Text="{Binding Path=ExecutionTime}" />
+                        <TextBlock FontSize="16" Text="{Binding Path=ExecutionTime}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -50,7 +50,7 @@
                 <DataTemplate>
                     <StackPanel Margin="5">
                         <TextBlock FontSize="18" Text="{Binding Path=NameCustomer}" />
-                        <TextBlock FontSize="18" Text="{Binding Path=TimeLeft}" />
+                        <TextBlock FontSize="16" Text="{Binding Path=TimeLeft}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

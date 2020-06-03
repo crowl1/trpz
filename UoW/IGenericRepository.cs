@@ -9,14 +9,6 @@ namespace DAL.Abstract
 {
     public interface IGenericRepository<T> where T : class
     {
-        /*
-        T Get(int id);
-        List<T> ListEntities();
-        List<T> ListEntities(Expression<Func<T, bool>> expression);
-        void Insert(T entity);
-        void Update(T entity);
-        void Delete(T entity);
-        */
         void Create(T obj);
         void Update(T obj);
         void Delete(int id);

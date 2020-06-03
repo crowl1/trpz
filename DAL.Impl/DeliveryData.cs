@@ -12,10 +12,7 @@ namespace DAL.Impl
 {
     public class DeliveryData : DbContext
     {
-        public DeliveryData() : base("DbConnection")
-        {
-            //ConfigurationManager.ConnectionStrings["DataBaseConnection"].ConnectionString
-        }
+        public DeliveryData() : base("DbConnection") {}
 
         public DbSet<OrderE> Orders { get; set; }
         public DbSet<StorageE> Storages{ get; set; }
