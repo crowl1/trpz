@@ -19,7 +19,7 @@ namespace DLL.IMPL.Service
 
         public void Create(OrderDTO obj)
         {
-            _orderRepository.Create(_orderMapper.OrderDTO2OrderE(obj));
+            _orderRepository.Create(_orderMapper.OrderDTO2E(obj));
         }
 
         public void Delete(int id)
@@ -29,10 +29,10 @@ namespace DLL.IMPL.Service
 
         public IEnumerable<OrderDTO> GetAll()
         {
-            List<OrderDTO> NewAviaries = new List<OrderDTO>();
+            List<OrderDTO> NewOBJ = new List<OrderDTO>();
             foreach (var item in _orderRepository.GetAll())
-            NewAviaries.Add(_orderMapper.OrderE2OrderDTO(item));
-            return NewAviaries;
+            NewOBJ.Add(_orderMapper.OrderE2DTO(item));
+            return NewOBJ;
         }
 
         public OrderDTO Read()

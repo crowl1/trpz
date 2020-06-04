@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Abstract
 {
-    public interface IManagerService : IGenintericService<ManagerDTO>
+    public interface IManagerService : IGenericService<ManagerDTO>
     {
     }
 }

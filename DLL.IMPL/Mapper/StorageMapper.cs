@@ -10,11 +10,11 @@ namespace BLL.IMPL.Mapper
 {
     public class StorageMapper
     {
-        public StorageE StorageDTO2StorageE(StorageDTO Storage)
+        public StorageE StorageDTO2E(StorageDTO Storage)
         {
             return new StorageE { ID = Storage.ID, Name = Storage.Name, Distance = Storage.Distance };
         }
-        public StorageDTO StorageE2StorageDTO (StorageE Storage)
+        public StorageDTO StorageE2DTO (StorageE Storage)
         {
             return new StorageDTO { ID = Storage.ID, Name = Storage.Name, Distance = Storage.Distance };
         }

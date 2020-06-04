@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Abstract
 {
-    public interface IDriverService : IGenintericService<DriverDTO>
+    public interface IDriverService : IGenericService<DriverDTO>
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Abstract
 {
-    public interface IOrderService : IGenintericService<OrderDTO>
+    public interface IOrderService : IGenericService<OrderDTO>
     {
     }
 }

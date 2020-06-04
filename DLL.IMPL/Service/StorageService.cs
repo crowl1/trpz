@@ -29,10 +29,10 @@ namespace DLL.IMPL.Service
 
         public IEnumerable<StorageDTO> GetAll()
         {
-            List<StorageDTO> NewAviaries = new List<StorageDTO>();
+            List<StorageDTO> NewOBJ = new List<StorageDTO>();
             foreach (var item in _storageRepository.GetAll())
-            NewAviaries.Add(_storageMapper.StorageE2StorageDTO(item));
-            return NewAviaries;
+            NewOBJ.Add(_storageMapper.StorageE2DTO(item));
+            return NewOBJ;
         }
 
         public StorageDTO Read()

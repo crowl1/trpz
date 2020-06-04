@@ -10,11 +10,11 @@ namespace BLL.IMPL.Mapper
 {
     public class ManagerMapper
     {
-        public ManagerE ManagerDTO2ManagerE(ManagerDTO Manager)
+        public ManagerE ManagerDTO2E(ManagerDTO Manager)
         {
             return new ManagerE { ID = Manager.ID, Name = Manager.Name, ExecutionTime = Manager.ExecutionTime };
         }
-        public ManagerDTO ManagerE2ManagerDTO (ManagerE Manager)
+        public ManagerDTO ManagerE2DTO (ManagerE Manager)
         {
             return new ManagerDTO { ID = Manager.ID, Name = Manager.Name, ExecutionTime = Manager.ExecutionTime };
         }

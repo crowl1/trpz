@@ -29,10 +29,10 @@ namespace DLL.IMPL.Service
 
         public IEnumerable<ManagerDTO> GetAll()
         {
-            List<ManagerDTO> NewAviaries = new List<ManagerDTO>();
+            List<ManagerDTO> NewOBJ = new List<ManagerDTO>();
             foreach (var item in _managerRepository.GetAll())
-            NewAviaries.Add(_managerMapper.ManagerE2ManagerDTO(item));
-            return NewAviaries;
+            NewOBJ.Add(_managerMapper.ManagerE2DTO(item));
+            return NewOBJ;
         }
 
         public ManagerDTO Read()

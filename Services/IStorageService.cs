@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Abstract
 {
-    public interface IStorageService : IGenintericService<StorageDTO>
+    public interface IStorageService : IGenericService<StorageDTO>
     {
     }
 }

@@ -29,10 +29,10 @@ namespace DLL.IMPL.Service
 
         public IEnumerable<GoodDTO> GetAll()
         {
-            List<GoodDTO> NewAviaries = new List<GoodDTO>();
+            List<GoodDTO> NewOBJ = new List<GoodDTO>();
             foreach (var item in goodRepository.GetAll())
-            NewAviaries.Add(goodMapper.GoodE2GoodDTO(item));
-            return NewAviaries;
+            NewOBJ.Add(goodMapper.GoodE2DTO(item));
+            return NewOBJ;
         }
 
         public GoodDTO Read()

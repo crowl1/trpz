@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Abstract
 {
-    public interface IGenintericService<T>
+    public interface IGenericService<T>
     {
         void Create(T obj);
         void Update(T obj);

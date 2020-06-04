@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Abstract
 {
-    public interface IGoodService : IGenintericService<GoodDTO>
+    public interface IGoodService : IGenericService<GoodDTO>
     {
     }
 }

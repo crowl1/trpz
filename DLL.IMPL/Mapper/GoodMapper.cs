@@ -10,11 +10,11 @@ namespace BLL.IMPL.Mapper
 {
     public class GoodMapper
     {
-        public GoodE GoodDTO2GoodE(GoodDTO good)
+        public GoodE GoodDTO2E(GoodDTO good)
         {
             return new GoodE { ID = good.ID, Name = good.Name, ExecutionTime = good.ExecutionTime };
         }
-        public GoodDTO GoodE2GoodDTO (GoodE good)
+        public GoodDTO GoodE2DTO (GoodE good)
         {
             return new GoodDTO { ID = good.ID, Name = good.Name, ExecutionTime = good.ExecutionTime };
         }

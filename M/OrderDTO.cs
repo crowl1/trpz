@@ -14,9 +14,7 @@ namespace M
         public string NameCustomer { get; set; }
         public long TimeLeft { get; set; }
 
-        public int StorageIN
-        { get; set; }
-        public int GoodIN
-        { get; set; }
+        public int StorageIN { get; set; }
+        public int GoodIN { get; set; }
     }
 }

@@ -13,12 +13,12 @@ namespace BLL.IMPL.Mapper
         GoodMapper goodMapper = new GoodMapper();
         StorageMapper storageMapper = new StorageMapper();
 
-        public OrderDTO OrderE2OrderDTO (OrderE order)
+        public OrderDTO OrderE2DTO (OrderE order)
         {
             return new OrderDTO { ID = order.ID, NameCustomer = order.NameCustomer, TimeLeft = order.TimeLeft, GoodIN = order.Good, StorageIN = order.Storage };
         }
 
-        public OrderE OrderDTO2OrderE(OrderDTO order)
+        public OrderE OrderDTO2E(OrderDTO order)
         {
             return new OrderE { ID = order.ID, NameCustomer = order.NameCustomer, TimeLeft = order.TimeLeft, Good = order.GoodIN, Storage = order.StorageIN };
         }

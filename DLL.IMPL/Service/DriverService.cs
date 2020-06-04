@@ -29,10 +29,10 @@ namespace DLL.IMPL.Service
 
         public IEnumerable<DriverDTO> GetAll()
         {
-            List<DriverDTO> NewAviaries = new List<DriverDTO>();
+            List<DriverDTO> NewOBJ = new List<DriverDTO>();
             foreach (var item in _driverRepository.GetAll())
-            NewAviaries.Add(_driverMapper.DriverE2DriverDTO(item));
-            return NewAviaries;
+            NewOBJ.Add(_driverMapper.DriverE2DTO(item));
+            return NewOBJ;
         }
 
         public DriverDTO Read()
